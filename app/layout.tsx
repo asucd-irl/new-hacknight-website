@@ -38,6 +38,9 @@ export default function RootLayout({
             <a href="#portfolio" className="hover:text-brand-dark">
               Portfolio
             </a>
+            <a href="#statement" className="hover:text-brand-dark">
+              Mission
+            </a>
             <a href="#faq" className="hover:text-brand-dark">
               FAQ
             </a>
