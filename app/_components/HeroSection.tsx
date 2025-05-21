@@ -1,12 +1,13 @@
+import ImageCarousel from "./ImageCarousel";
 import Section from "./Section";
 
 export default function HeroSection() {
   return (
-    <Section id="hero" bg="bg-white">
+    <Section id="hero" bg="bg-white" fullHeight={false}>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand/10 via-brand/0 to-transparent" />
 
-      <div className="z-10 flex flex-col items-center w-full">
-        <div className="text-center max-w-2xl mb-12">
+      <div className="z-10 flex flex-col items-center w-full pt-16">
+        <div className="text-center max-w-2xl mb-8">
           <h1 className="mb-4 text-4xl font-black text-brand-dark md:text-5xl lg:text-6xl">
             for the love of making.
           </h1>
@@ -26,6 +27,9 @@ export default function HeroSection() {
           >
             Sign Up
           </a>
+        </div>
+        <div className="w-full mb-4 mx-auto">
+          <ImageCarousel />
         </div>
       </div>
     </Section>
