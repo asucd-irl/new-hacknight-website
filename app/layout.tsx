@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} bg-white text-gray-900`}>
+      <body className={`${inter.className} bg-[#FEFFF3] text-gray-900`}>
         <Navbar />
         {/* page content */}
         {children}
