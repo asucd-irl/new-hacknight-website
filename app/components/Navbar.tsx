@@ -30,29 +30,20 @@ export default function Navbar() {
       </a>
 
       <div className="space-x-8 text-sm font-medium tracking-wide">
-        <a
-          href="#about"
-          className="hover:text-brand-dark transition-colors duration-200"
-        >
-          About
+        <a href="#about" className="hover:text-brand-dark">
+          about
         </a>
-        <a
-          href="#portfolio"
-          className="hover:text-brand-dark transition-colors duration-200"
-        >
-          Portfolio
+        <a href="#portfolio" className="hover:text-brand-dark">
+          mentors
         </a>
-        <a
-          href="#statement"
-          className="hover:text-brand-dark transition-colors duration-200"
-        >
-          Mission
+        <a href="#statement" className="hover:text-brand-dark">
+          portfolio
         </a>
         <a
           href="#signup"
-          className="inline-block rounded-md px-4 py-1.5 text-sm font-medium transition-colors duration-200 border bg-[#022851] text-white border-transparent hover:bg-white hover:text-[#022851] hover:border-black"
+          className="inline-block rounded-full bg-[#7A40FF] px-3 py-2 text-md font-medium text-white transition-all duration-200 hover:bg-[#5A2FD6] hover:shadow-lg"
         >
-          Sign Up
+          Register Now
         </a>
       </div>
     </nav>

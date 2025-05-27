@@ -1,5 +1,11 @@
 import ImageCarousel from "./ImageCarousel";
 import Section from "./Section";
+import { Instrument_Serif } from "next/font/google";
+
+const instrumentSerif = Instrument_Serif({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function HeroSection() {
   return (
@@ -8,24 +14,26 @@ export default function HeroSection() {
 
       <div className="z-10 flex flex-col items-center w-full pt-16">
         <div className="text-center max-w-2xl mb-8">
-          <h1 className="mb-4 text-4xl font-black text-brand-dark md:text-5xl lg:text-6xl">
-            for the love of making.
-          </h1>
-
-          <p className="mb-6 text-lg text-gray-700 md:text-xl">
+          <p className="mb-2 text-xl font-bold text-[#7A40FF] md:text-2xl">
             Every Thursday @ 6 PM
           </p>
 
-          <p className="mb-8 text-gray-600">
-            bringing you together with student founders to innovate on new
-            ideas.
+          <h1 className="mb-4 text-4xl font-black text-brand-dark md:text-5xl lg:text-6xl">
+            for the love of making.
+          </h1>
+          <p
+            className={`mb-8 mt-4 text-black max-w-[50ch] text-center mx-auto text-lg md:text-xl ${instrumentSerif.className}`}
+          >
+            bringing you together with student
+            <br />
+            founders to innovate on new ideas.
           </p>
 
           <a
             href="#signup"
-            className="inline-block rounded-md bg-[#022851] px-6 py-3 text-sm font-medium text-white transition-colors duration-200 border border-transparent hover:bg-white hover:text-[#022851] hover:border-black"
+            className="inline-block rounded-full bg-[#7A40FF] px-8 py-3 text-xl font-medium text-white transition-all duration-200 hover:bg-[#5A2FD6] hover:shadow-lg"
           >
-            Sign Up
+            Register Now
           </a>
         </div>
         <div className="w-full mb-4 mx-auto">
