@@ -29,12 +29,13 @@ export default function AboutSection() {
         </div>
         <div className="flex-[1] flex justify-center">
           <div
-            className="rounded-lg flex flex-col items-center justify-start -rotate-3 shadow-2xl border-2 border-[#BBBBBB] bg-white"
+            className="flex flex-col items-center justify-start -rotate-3 shadow-2xl border-2 border-[#BBBBBB] bg-white"
             style={{ width: 520, height: 460 }}
           >
             <img
               src="/about.jpg"
-              className="rounded-lg object-contain w-[488px] h-[388px] mt-3"
+              alt="Community member at work"
+              className="object-contain w-[488px] h-[388px] mt-3"
               style={{ objectPosition: "center" }}
             />
           </div>
