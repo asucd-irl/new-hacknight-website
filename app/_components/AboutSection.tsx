@@ -8,7 +8,7 @@ const instrumentSerif = Instrument_Serif({
 
 export default function AboutSection() {
   return (
-    <Section id="about" bg="bg-white">
+    <Section id="about" bg="bg-[#FEFFF3]">
       <div className="flex flex-col md:flex-row items-center justify-between gap-16 py-16">
         <div className="flex-[1.2] max-w-3xl">
           <h1 className="text-5xl font-bold mb-8">
