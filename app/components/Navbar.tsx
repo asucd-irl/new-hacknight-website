@@ -16,16 +16,10 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      className={`fixed inset-x-0 top-0 z-50 flex items-center justify-between px-6 py-3 backdrop-blur-md border-b transition-colors duration-200 ${
-        isScrolled
-          ? "bg-white text-gray-900 border-black"
-          : "bg-[#022851] text-white border-white"
-      }`}
-    >
+    <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-6 py-3 backdrop-blur-md border-b bg-white/80 text-gray-900 border-black/20">
       <a href="#hero" className="flex items-center">
         <Image
-          src={isScrolled ? "/logo-black.svg" : "/logo-white.svg"}
+          src="/logo-black.svg"
           alt="Hack Night logo"
           width={32}
           height={32}
@@ -56,11 +50,7 @@ export default function Navbar() {
         </a>
         <a
           href="#signup"
-          className={`inline-block rounded-md px-4 py-1.5 text-sm font-medium transition-colors duration-200 border ${
-            isScrolled
-              ? "bg-[#022851] text-white border-transparent hover:bg-white hover:text-[#022851] hover:border-black"
-              : "bg-transparent text-white border-white hover:bg-white hover:text-[#022851] hover:border-black"
-          }`}
+          className="inline-block rounded-md px-4 py-1.5 text-sm font-medium transition-colors duration-200 border bg-[#022851] text-white border-transparent hover:bg-white hover:text-[#022851] hover:border-black"
         >
           Sign Up
         </a>
