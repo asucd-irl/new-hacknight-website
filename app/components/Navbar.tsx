@@ -16,7 +16,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-6 py-3 backdrop-blur-md border-b bg-white/80 text-gray-900 border-black/20">
+    <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-6 py-3 backdrop-blur-md border-b bg-[#FEFFF3]/80 text-gray-900 border-black/20">
       <a href="#hero" className="flex items-center">
         <Image
           src="/logo-black.svg"
