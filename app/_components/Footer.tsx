@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full border-t py-8 bg-white">
+    <footer className="w-full border-t py-8 bg-[#FEFFF3]">
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0">
           <p className="text-sm text-gray-600">Follow us on our socials</p>
