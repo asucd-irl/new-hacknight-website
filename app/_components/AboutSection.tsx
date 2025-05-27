@@ -1,11 +1,45 @@
 import Section from "./Section";
+import { Instrument_Serif } from "next/font/google";
+
+const instrumentSerif = Instrument_Serif({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function AboutSection() {
   return (
-    <Section id="about" bg="bg-stone-300">
-      <h2 className="text-3xl font-semibold text-center">
-        Behind every breakthrough was a community of builders.
-      </h2>
+    <Section id="about" bg="bg-white">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-16 py-16">
+        <div className="flex-[1.2] max-w-3xl">
+          <h1 className="text-5xl font-bold mb-8">
+            Behind every breakthrough was a{" "}
+            <span className="text-purple-600">community of builders.</span>
+          </h1>
+          <p className={`text-3xl mb-4 ${instrumentSerif.className}`}>
+            We learn from each other, push limits, and celebrate wins together.
+          </p>
+          <p className={`text-3xl mb-10 ${instrumentSerif.className}`}>
+            That's what this space is all about.
+          </p>
+          <p className="text-3xl font-bold">
+            Community creates momentum.
+            <br />
+            Get close to it.
+          </p>
+        </div>
+        <div className="flex-[1] flex justify-center">
+          <div
+            className="rounded-lg flex flex-col items-center justify-start -rotate-3 shadow-2xl border-2 border-[#BBBBBB] bg-white"
+            style={{ width: 520, height: 460 }}
+          >
+            <img
+              src="/about.jpg"
+              className="rounded-lg object-contain w-[488px] h-[388px] mt-3"
+              style={{ objectPosition: "center" }}
+            />
+          </div>
+        </div>
+      </div>
     </Section>
   );
 }
