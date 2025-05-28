@@ -1,10 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,46 +33,61 @@ export default function Navbar() {
     }
   };
 
+  const getNavLink = (href: string, label: string) => {
+    if (isHomePage) {
+      return (
+        <a
+          href={href}
+          className="hover:text-brand-dark cursor-pointer"
+          onClick={(e) => handleSmoothScroll(e, href.substring(1))}
+        >
+          {label}
+        </a>
+      );
+    }
+    return (
+      <Link href={`/${href}`} className="hover:text-brand-dark cursor-pointer">
+        {label}
+      </Link>
+    );
+  };
+
   return (
     <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-6 py-3 backdrop-blur-md border-b bg-[#FEFFF3]/80 text-gray-900 border-black/20">
-      <a
-        href="#hero"
-        className="flex items-center cursor-pointer"
-        onClick={(e) => handleSmoothScroll(e, "hero")}
-      >
-        <Image
-          src="/images/logo-black.svg"
-          alt="Hack Night logo"
-          width={32}
-          height={32}
-          className="h-10 w-auto"
-          priority
-          fill={false}
-        />
-      </a>
+      {isHomePage ? (
+        <a
+          href="#hero"
+          className="flex items-center cursor-pointer"
+          onClick={(e) => handleSmoothScroll(e, "hero")}
+        >
+          <Image
+            src="/images/logo-black.svg"
+            alt="Hack Night logo"
+            width={32}
+            height={32}
+            className="h-10 w-auto"
+            priority
+            fill={false}
+          />
+        </a>
+      ) : (
+        <Link href="/#hero" className="flex items-center cursor-pointer">
+          <Image
+            src="/images/logo-black.svg"
+            alt="Hack Night logo"
+            width={32}
+            height={32}
+            className="h-10 w-auto"
+            priority
+            fill={false}
+          />
+        </Link>
+      )}
 
       <div className="space-x-8 text-sm font-medium tracking-wide">
-        <a
-          href="#about"
-          className="hover:text-brand-dark cursor-pointer"
-          onClick={(e) => handleSmoothScroll(e, "about")}
-        >
-          about
-        </a>
-        <a
-          href="#mentor"
-          className="hover:text-brand-dark cursor-pointer"
-          onClick={(e) => handleSmoothScroll(e, "mentor")}
-        >
-          mentors
-        </a>
-        <a
-          href="#portfolio"
-          className="hover:text-brand-dark cursor-pointer"
-          onClick={(e) => handleSmoothScroll(e, "portfolio")}
-        >
-          portfolio
-        </a>
+        {getNavLink("#about", "about")}
+        {getNavLink("#mentor", "mentors")}
+        {getNavLink("#portfolio", "portfolio")}
         <a
           href="https://ucdhacknight.com"
           target="_blank"
