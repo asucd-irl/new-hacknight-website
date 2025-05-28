@@ -70,9 +70,10 @@ export default function Navbar() {
           portfolio
         </a>
         <a
-          href="#signup"
+          href="https://ucdhacknight.com"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block rounded-full bg-[#7A40FF] px-3 py-2 text-md font-medium text-white transition-all duration-200 hover:bg-[#5A2FD6] hover:shadow-lg cursor-pointer"
-          onClick={(e) => handleSmoothScroll(e, "signup")}
         >
           Register Now
         </a>

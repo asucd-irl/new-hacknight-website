@@ -30,7 +30,9 @@ export default function HeroSection() {
           </p>
 
           <a
-            href="#signup"
+            href="https://ucdhacknight.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block rounded-full bg-[#7A40FF] px-8 py-3 text-xl font-medium text-white transition-all duration-200 hover:bg-[#5A2FD6] hover:shadow-lg"
           >
             Register Now
