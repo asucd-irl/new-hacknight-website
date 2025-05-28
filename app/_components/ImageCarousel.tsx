@@ -2,7 +2,7 @@
 
 import "./carousel.css";
 
-const IMAGE_PATH = "/rec.png";
+const IMAGE_PATH = "/images/rec.png";
 
 // placeholder images for now
 const CAROUSEL_ITEMS = [

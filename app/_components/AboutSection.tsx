@@ -33,7 +33,7 @@ export default function AboutSection() {
             style={{ width: 520, height: 460 }}
           >
             <img
-              src="/about.jpg"
+              src="/images/about.jpg"
               alt="Community member at work"
               className="object-contain w-[488px] h-[388px] mt-3"
               style={{ objectPosition: "center" }}
