@@ -1,5 +1,6 @@
 import Section from "./Section";
-import { instrumentSerif } from "../fonts";
+import Image from "next/image";
+import { instrumentSerif } from "../_components/fonts";
 
 export default function AboutSection() {
   return (
@@ -14,7 +15,7 @@ export default function AboutSection() {
             We learn from each other, push limits, and celebrate wins together.
           </p>
           <p className={`text-3xl mb-10 ${instrumentSerif.className}`}>
-            That's what this space is all about.
+            That&apos;s what this space is all about.
           </p>
           <p className="text-3xl font-bold">
             Community creates momentum.
@@ -27,8 +28,11 @@ export default function AboutSection() {
             className="flex flex-col items-center justify-start -rotate-3 shadow-2xl border-2 border-[#BBBBBB] bg-white"
             style={{ width: 520, height: 460 }}
           >
-            <img
+            <Image
               src="/images/about.jpg"
+              alt="About HackNights"
+              width={488}
+              height={388}
               className="object-contain w-[488px] h-[388px] mt-3"
               style={{ objectPosition: "center" }}
             />

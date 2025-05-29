@@ -1,7 +1,8 @@
 import Section from "./Section";
 import Link from "next/link";
+import Image from "next/image";
 import { projects } from "@/lib/projects";
-import { instrumentSerif } from "../fonts";
+import { instrumentSerif } from "../_components/fonts";
 
 export default function PortfolioSection() {
   const displayedProjects = projects.slice(0, 6);
@@ -22,9 +23,11 @@ export default function PortfolioSection() {
             >
               <div className="w-full aspect-square bg-[#F1F1F1] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group-hover:scale-105 mb-3 flex items-center justify-center">
                 {project.thumbnail ? (
-                  <img
+                  <Image
                     src={project.thumbnail}
                     alt={project.title}
+                    width={300}
+                    height={300}
                     className="max-w-[75%] max-h-[75%] p-4 object-contain"
                   />
                 ) : (
