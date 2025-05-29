@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Instrument_Serif } from "next/font/google";
+import { Inter } from "next/font/google";
+import { instrumentSerif } from "./fonts";
 import Navbar from "./components/Navbar";
 
 const inter = Inter({
@@ -8,14 +9,8 @@ const inter = Inter({
   display: "swap",
 });
 
-const instrumentSerif = Instrument_Serif({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "Hack Night @ UC Davis",
+  title: "HackNights | for the love of making. | UC Davis",
   description: "For the love of making.",
 };
 
