@@ -1,11 +1,6 @@
 import ImageCarousel from "./ImageCarousel";
 import Section from "./Section";
-import { Instrument_Serif } from "next/font/google";
-
-const instrumentSerif = Instrument_Serif({
-  weight: "400",
-  subsets: ["latin"],
-});
+import { instrumentSerif } from "../fonts";
 
 export default function HeroSection() {
   return (
