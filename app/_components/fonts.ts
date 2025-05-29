@@ -6,6 +6,6 @@ export const instrumentSerif = Instrument_Serif({
 });
 
 export const instrumentSans = Instrument_Sans({
-  weight: "400",
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
