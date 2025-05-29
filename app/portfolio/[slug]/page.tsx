@@ -1,13 +1,7 @@
 import Link from "next/link";
 import { projects } from "@/lib/projects";
 import { notFound } from "next/navigation";
-import { Instrument_Sans } from "next/font/google";
-import { instrumentSerif } from "../../fonts";
-
-const instrumentSans = Instrument_Sans({
-  weight: "400",
-  subsets: ["latin"],
-});
+import { instrumentSerif, instrumentSans } from "../../fonts";
 
 type Props = {
   params: Promise<{ slug: string }>;
