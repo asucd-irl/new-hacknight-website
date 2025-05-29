@@ -9,7 +9,7 @@ export default function AboutSection() {
         <div className="flex-[1.2] max-w-3xl">
           <h1 className="text-5xl font-bold mb-8">
             Behind every breakthrough was a{" "}
-            <span className="text-purple-600">community of builders.</span>
+            <span className="text-[#7A40FF]">community of builders.</span>
           </h1>
           <p className={`text-3xl mb-4 ${instrumentSerif.className}`}>
             We learn from each other, push limits, and celebrate wins together.
