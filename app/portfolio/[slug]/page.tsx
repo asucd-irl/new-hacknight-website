@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { projects } from "@/lib/projects";
 import { notFound } from "next/navigation";
 import { instrumentSerif, instrumentSans } from "../../_components/fonts";
@@ -108,9 +109,11 @@ export default async function ProjectPage({ params }: Props) {
         <div className="mb-16">
           <div className="aspect-[16/9] bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
             {project.thumbnail ? (
-              <img
+              <Image
                 src={project.thumbnail}
                 alt={project.title}
+                width={800}
+                height={450}
                 className="w-full h-full object-contain p-4"
               />
             ) : (
