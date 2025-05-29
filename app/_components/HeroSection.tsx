@@ -1,11 +1,6 @@
 import ImageCarousel from "./ImageCarousel";
 import Section from "./Section";
-import { Instrument_Serif } from "next/font/google";
-
-const instrumentSerif = Instrument_Serif({
-  weight: "400",
-  subsets: ["latin"],
-});
+import { instrumentSerif } from "../fonts";
 
 export default function HeroSection() {
   return (
@@ -30,7 +25,9 @@ export default function HeroSection() {
           </p>
 
           <a
-            href="#signup"
+            href="https://ucdhacknight.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block rounded-full bg-[#7A40FF] px-8 py-3 text-xl font-medium text-white transition-all duration-200 hover:bg-[#5A2FD6] hover:shadow-lg"
           >
             Register Now

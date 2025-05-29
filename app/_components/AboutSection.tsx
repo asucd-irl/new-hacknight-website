@@ -1,10 +1,5 @@
 import Section from "./Section";
-import { Instrument_Serif } from "next/font/google";
-
-const instrumentSerif = Instrument_Serif({
-  weight: "400",
-  subsets: ["latin"],
-});
+import { instrumentSerif } from "../fonts";
 
 export default function AboutSection() {
   return (
@@ -33,8 +28,7 @@ export default function AboutSection() {
             style={{ width: 520, height: 460 }}
           >
             <img
-              src="/about.jpg"
-              alt="Community member at work"
+              src="/images/about.jpg"
               className="object-contain w-[488px] h-[388px] mt-3"
               style={{ objectPosition: "center" }}
             />
