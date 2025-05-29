@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { projects } from "@/lib/projects";
 import { notFound } from "next/navigation";
-import { instrumentSerif, instrumentSans } from "../../fonts";
+import { instrumentSerif, instrumentSans } from "../../_components/fonts";
 
 type Props = {
   params: Promise<{ slug: string }>;

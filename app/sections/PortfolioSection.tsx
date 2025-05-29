@@ -1,7 +1,7 @@
 import Section from "./Section";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
-import { instrumentSerif } from "../fonts";
+import { instrumentSerif } from "../_components/fonts";
 
 export default function PortfolioSection() {
   const displayedProjects = projects.slice(0, 6);

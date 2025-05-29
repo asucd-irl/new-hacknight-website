@@ -1,5 +1,5 @@
 import Section from "./Section";
-import { instrumentSerif } from "../fonts";
+import { instrumentSerif } from "../_components/fonts";
 
 export default function AboutSection() {
   return (

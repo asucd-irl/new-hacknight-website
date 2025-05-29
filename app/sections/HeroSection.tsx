@@ -1,6 +1,6 @@
-import ImageCarousel from "./ImageCarousel";
+import ImageCarousel from "../_components/ImageCarousel";
 import Section from "./Section";
-import { instrumentSerif } from "../fonts";
+import { instrumentSerif } from "../_components/fonts";
 
 export default function HeroSection() {
   return (

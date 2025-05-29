@@ -1,11 +1,11 @@
-import HeroSection from './_components/HeroSection';
-import AboutSection from './_components/AboutSection';
-import StatementSection from './_components/StatementSection';
-import PortfolioSection from './_components/PortfolioSection';
-import FAQSection from './_components/FAQSection';
-import Footer from './_components/Footer';
-import AboutSectionTwo from './_components/AboutSectionTwo';
-import MentorSection from './_components/MentorSection';
+import HeroSection from "./sections/HeroSection";
+import AboutSection from "./sections/AboutSection";
+import StatementSection from "./sections/StatementSection";
+import PortfolioSection from "./sections/PortfolioSection";
+import FAQSection from "./sections/FAQSection";
+import Footer from "./_components/Footer";
+import AboutSectionTwo from "./sections/AboutSectionTwo";
+import MentorSection from "./sections/MentorSection";
 export default function Home() {
   return (
     <>
@@ -16,7 +16,7 @@ export default function Home() {
       <MentorSection />
       <PortfolioSection />
       <FAQSection />
-      <Footer/>
+      <Footer />
     </>
   );
 }
