@@ -21,48 +21,36 @@ export default function ImageCarousel() {
         {CAROUSEL_ITEMS.map((item) => (
           <div
             key={`original-${item.id}`}
-            className="flex flex-col items-center justify-start -rotate-3 shadow-2xl border-2 border-[#BBBBBB] bg-white w-[calc(90vw-2rem)] max-w-128 h-128 lg:max-w-128 lg:w-128 lg:h-128 relative overflow-hidden"
+            className="flex flex-col items-center justify-end -rotate-3 shadow-2xl border-2 border-[#BBBBBB] bg-white w-[calc(90vw-2rem)] max-w-128 h-128 lg:max-w-128 lg:w-128 lg:h-128 relative overflow-hidden p-6 pb-12"
+            style={{ borderRadius: "0px" }}
           >
             <div
-              className="w-full h-full flex items-center justify-center"
-              style={{ width: "100%", height: "100%" }}
-            >
-              <div
-                className="object-contain w-full h-full mt-3"
-                style={{
-                  backgroundImage: `url('${item.image}')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  width: "95%",
-                  height: "85%",
-                  borderRadius: "inherit",
-                }}
-              ></div>
-            </div>
+              className="w-full h-full"
+              style={{
+                backgroundImage: `url('${item.image}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                borderRadius: "0px",
+              }}
+            ></div>
           </div>
         ))}
 
         {CAROUSEL_ITEMS.map((item) => (
           <div
             key={`duplicate-${item.id}`}
-            className="flex flex-col items-center justify-start -rotate-3 shadow-2xl border-2 border-[#BBBBBB] bg-white w-[calc(90vw-2rem)] max-w-128 h-128 lg:max-w-128 lg:w-128 lg:h-128 relative overflow-hidden"
+            className="flex flex-col items-center justify-end -rotate-3 shadow-2xl border-2 border-[#BBBBBB] bg-white w-[calc(90vw-2rem)] max-w-128 h-128 lg:max-w-128 lg:w-128 lg:h-128 relative overflow-hidden p-6 pb-12"
+            style={{ borderRadius: "0px" }}
           >
             <div
-              className="w-full h-full flex items-center justify-center"
-              style={{ width: "100%", height: "100%" }}
-            >
-              <div
-                className="object-contain w-full h-full mt-3"
-                style={{
-                  backgroundImage: `url('${item.image}')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  width: "95%",
-                  height: "85%",
-                  borderRadius: "inherit",
-                }}
-              ></div>
-            </div>
+              className="w-full h-full"
+              style={{
+                backgroundImage: `url('${item.image}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                borderRadius: "0px",
+              }}
+            ></div>
           </div>
         ))}
       </div>
