@@ -1,7 +1,7 @@
 import Section from "./Section";
 import Link from "next/link";
 import Image from "next/image";
-import { projects } from "@/lib/projects";
+import { projects } from "@/app/data/projects";
 import { instrumentSerif } from "../_components/fonts";
 
 export default function PortfolioSection() {

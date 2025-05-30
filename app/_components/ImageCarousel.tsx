@@ -1,56 +1,38 @@
 "use client";
 
 import "./carousel.css";
-
-const IMAGE_PATH = "/images/rec.png";
-
-// placeholder images for now
-const CAROUSEL_ITEMS = [
-  { id: 1, image: IMAGE_PATH },
-  { id: 2, image: IMAGE_PATH },
-  { id: 3, image: IMAGE_PATH },
-  { id: 4, image: IMAGE_PATH },
-  { id: 5, image: IMAGE_PATH },
-  { id: 6, image: IMAGE_PATH },
-];
+import { carouselImages } from "../data/carousel";
+import Image from "next/image";
 
 export default function ImageCarousel() {
   return (
     <div className="overflow-x-hidden" data-astro-cid-carousel>
-      <div className="flex w-fit gap-16 p-4 md:p-12 lg:px-20 carousel">
-        {CAROUSEL_ITEMS.map((item) => (
+      <div className="flex w-fit gap-16 carousel">
+        {carouselImages.map((item) => (
           <div
             key={`original-${item.id}`}
-            className="flex flex-col items-center justify-end -rotate-3 shadow-2xl border-2 border-[#BBBBBB] bg-white w-[calc(90vw-2rem)] max-w-128 h-128 lg:max-w-128 lg:w-128 lg:h-128 relative overflow-hidden p-6 pb-12"
-            style={{ borderRadius: "0px" }}
+            className="relative w-[calc(90vw-2rem)] max-w-128 h-[48rem] lg:max-w-128 lg:w-128 lg:h-[48rem] -rotate-3"
           >
-            <div
-              className="w-full h-full"
-              style={{
-                backgroundImage: `url('${item.image}')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                borderRadius: "0px",
-              }}
-            ></div>
+            <Image
+              src={item.image}
+              alt={`Carousel image ${item.id}`}
+              fill
+              className="object-contain"
+            />
           </div>
         ))}
 
-        {CAROUSEL_ITEMS.map((item) => (
+        {carouselImages.map((item) => (
           <div
             key={`duplicate-${item.id}`}
-            className="flex flex-col items-center justify-end -rotate-3 shadow-2xl border-2 border-[#BBBBBB] bg-white w-[calc(90vw-2rem)] max-w-128 h-128 lg:max-w-128 lg:w-128 lg:h-128 relative overflow-hidden p-6 pb-12"
-            style={{ borderRadius: "0px" }}
+            className="relative w-[calc(90vw-2rem)] max-w-128 h-[40rem] lg:max-w-128 lg:w-128 lg:h-[40rem] -rotate-3"
           >
-            <div
-              className="w-full h-full"
-              style={{
-                backgroundImage: `url('${item.image}')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                borderRadius: "0px",
-              }}
-            ></div>
+            <Image
+              src={item.image}
+              alt={`Carousel image ${item.id}`}
+              fill
+              className="object-contain"
+            />
           </div>
         ))}
       </div>

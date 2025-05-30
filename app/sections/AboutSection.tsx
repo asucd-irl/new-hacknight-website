@@ -4,7 +4,7 @@ import { instrumentSerif, patrickHand } from "../_components/fonts";
 
 export default function AboutSection() {
   return (
-    <Section id="about" bg="bg-[#FEFFF3]">
+    <Section id="about" bg="bg-[#FEFFF3]" fullHeight={true}>
       <div className="flex flex-col md:flex-row items-center justify-between gap-16 py-16">
         <div className="flex-[1.2] max-w-3xl">
           <h1 className="text-5xl font-bold mb-8">

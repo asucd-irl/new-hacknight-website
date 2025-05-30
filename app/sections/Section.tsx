@@ -3,6 +3,7 @@ type Props = {
   id: string;
   children: React.ReactNode;
   fullHeight?: boolean;
+  noPadding?: boolean;
 };
 
 export default function Section({
@@ -10,13 +11,14 @@ export default function Section({
   id,
   children,
   fullHeight = true,
+  noPadding = false,
 }: Props) {
   return (
     <section
       id={id}
-      className={`${bg} ${
-        fullHeight ? "min-h-screen" : ""
-      } flex flex-col items-center justify-center px-6 py-16`}
+      className={`${bg} ${fullHeight ? "min-h-screen" : ""} flex flex-col items-center justify-center ${
+        noPadding ? "" : "py-16 px-16"
+      }`}
     >
       {children}
     </section>
