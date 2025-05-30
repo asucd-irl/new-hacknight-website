@@ -1,5 +1,6 @@
 import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
+import CarouselSection from "./sections/CarouselSection";
 import StatementSection from "./sections/StatementSection";
 import PortfolioSection from "./sections/PortfolioSection";
 import FAQSection from "./sections/FAQSection";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <CarouselSection />
       <AboutSection />
       <StatementSection />
       <AboutSectionTwo />

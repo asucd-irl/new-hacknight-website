@@ -39,10 +39,6 @@
   animation: scroll 45s linear infinite;
 }
 
-.carousel:hover {
-  animation-play-state: paused;
-}
-
 .w-128 {
   width: 32rem;
 }

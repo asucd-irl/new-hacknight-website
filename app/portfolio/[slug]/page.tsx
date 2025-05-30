@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { projects } from "@/lib/projects";
+import { projects } from "@/app/data/projects";
 import { notFound } from "next/navigation";
 import { instrumentSerif, instrumentSans } from "../../_components/fonts";
 
