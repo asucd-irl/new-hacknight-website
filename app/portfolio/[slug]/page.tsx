@@ -176,7 +176,7 @@ export default async function ProjectPage({ params }: Props) {
         <div className="flex justify-center mt-16">
           <Link
             href="/#portfolio"
-            className={`bg-purple-600 hover:bg-purple-700 text-white px-10 py-4 rounded-full transition-colors duration-300 text-xl ${instrumentSans.className}`}
+            className={`bg-[#7A40FF] hover:bg-[#5A2FD6] text-white px-10 py-4 rounded-full transition-colors duration-300 text-xl ${instrumentSans.className}`}
           >
             View More Projects
           </Link>

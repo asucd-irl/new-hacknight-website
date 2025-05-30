@@ -11,7 +11,7 @@ export default function PortfolioSection() {
     <Section id="portfolio" bg="bg-[#FEFFF3]" fullHeight={false}>
       <div className="max-w-5xl mx-auto w-full">
         <h2 className="text-6xl font-bold mb-15 text-left">
-          Featured <span className="text-purple-600">Projects</span>
+          Featured <span className="text-[#7A40FF]">Projects</span>
         </h2>
 
         <div className="grid grid-cols-3 gap-x-12 gap-y-16">
