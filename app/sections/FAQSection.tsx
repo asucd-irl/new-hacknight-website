@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Section from "./Section";
+import { instrumentSerif, instrumentSans } from "../_components/fonts";
 
 type QA = { q: string; a: string };
 
@@ -20,11 +21,11 @@ const faqs: QA[] = [
   },
   {
     q: "How do I register?",
-    a: "You can register for free on our webiste! Just go to ucdhacknight.com.",
+    a: "You can register for free by joining our Google Calendar invite list. To join the list, sign up with your preferred email for Google Calendar our website and we'll send you an invite every week!",
   },
   {
     q: "Do I have to attend every week?",
-    a: "No. Hack Nights are drop-in; come whenever you're free.",
+    a: "No but make sure you RSVP every week!",
   },
 ];
 
@@ -35,19 +36,31 @@ function FAQItem({ q, a }: QA) {
     <div className="rounded-md border border-gray-200 shadow-sm">
       <button
         onClick={() => setOpen(!open)}
-        className={`flex w-full items-center justify-between p-4 text-left font-medium transition-colors hover:bg-gray-50 ${
+        className={`flex w-full items-center justify-between p-4 text-left font-medium text-xl transition-colors hover:bg-gray-50 ${
           open ? "border-b border-gray-200" : "rounded-md"
-        }`}
+        } ${instrumentSerif.className}`}
       >
         {q}
-        <span className="text-xl leading-none">{open ? "−" : "+"}</span>
+        <span
+          className={`text-xl leading-none transition-transform duration-150 ${
+            open ? "rotate-180" : ""
+          }`}
+        >
+          {open ? "−" : "+"}
+        </span>
       </button>
 
-      {open && (
-        <div className="p-4 text-gray-700">
-          <p>{a}</p>
+      <div
+        className={`grid transition-all duration-300 ease-in-out ${
+          open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <div className={`p-4 text-gray-700 ${instrumentSans.className}`}>
+            <p>{a}</p>
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
