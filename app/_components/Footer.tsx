@@ -1,4 +1,5 @@
 import React from 'react';
+import { LinkPreview } from "@/components/ui/link-preview";
 
 const Footer: React.FC = () => {
   return (
@@ -7,12 +8,22 @@ const Footer: React.FC = () => {
         <div className="mb-4 md:mb-0">
           <p className="text-sm text-gray-600">Follow us on our socials</p>
           <div className="flex space-x-4 mt-2">
-            <a href="https://linkedin.com" className="text-gray-600 hover:text-brand transition-colors">
+            <LinkPreview 
+              url="https://www.linkedin.com/company/hacknight/" 
+              width={250}
+              height={150}
+              className="text-gray-600 hover:text-brand transition-colors"
+            >
               LinkedIn
-            </a>
-            <a href="https://instagram.com" className="text-gray-600 hover:text-brand transition-colors">
+            </LinkPreview>
+            <LinkPreview 
+              url="https://www.instagram.com/ucdhacknight/"
+              width={250}
+              height={150}
+              className="text-gray-600 hover:text-brand transition-colors"
+            >
               Instagram
-            </a>
+            </LinkPreview>
           </div>
         </div>
         <div className="text-sm text-gray-600">

@@ -4,6 +4,7 @@ type Props = {
   children: React.ReactNode;
   fullHeight?: boolean;
   noPadding?: boolean;
+  fullWidth?: boolean;
 };
 
 export default function Section({
@@ -12,6 +13,7 @@ export default function Section({
   children,
   fullHeight = true,
   noPadding = false,
+  fullWidth = false,
 }: Props) {
   return (
     <section
@@ -20,7 +22,9 @@ export default function Section({
         noPadding ? "" : "py-16 px-16"
       }`}
     >
-      {children}
+      <div className={fullWidth ? "w-full" : "w-[85%]"}>
+        {children}
+      </div>
     </section>
   );
 }
