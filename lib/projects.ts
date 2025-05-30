@@ -68,7 +68,7 @@ On the technical side, the Unity C# codebase leverages a bespoke state-machine f
   },
   {
     slug: "picloud",
-    title: "[p]iCloud",
+    title: "MiPi",
     description:
       "Turn your Pi5 into a private cloud for streaming, storage and gaming",
     thumbnail: "/images/pi.png",

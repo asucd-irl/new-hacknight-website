@@ -1,6 +1,6 @@
 import Section from "./Section";
 import Image from "next/image";
-import { instrumentSerif } from "../_components/fonts";
+import { instrumentSerif, patrickHand } from "../_components/fonts";
 
 export default function AboutSection() {
   return (
@@ -36,6 +36,12 @@ export default function AboutSection() {
               className="object-contain w-[488px] h-[388px] mt-3"
               style={{ objectPosition: "center" }}
             />
+            <div
+              className={`w-full text-center mt-2 text-md ${patrickHand.className}`}
+              style={{ letterSpacing: "0.02em" }}
+            >
+              HackNights demo in action, circa SQ25
+            </div>
           </div>
         </div>
       </div>
