@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { instrumentSerif } from "../_components/fonts";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -27,7 +28,7 @@ export default function Navbar() {
       return (
         <a
           href={href}
-          className="hover:text-brand-dark cursor-pointer"
+          className={`hover:text-brand-dark cursor-pointer ${instrumentSerif.className} text-lg`}
           onClick={(e) => handleSmoothScroll(e, href.substring(1))}
         >
           {label}
@@ -35,7 +36,10 @@ export default function Navbar() {
       );
     }
     return (
-      <Link href={`/${href}`} className="hover:text-brand-dark cursor-pointer">
+      <Link
+        href={`/${href}`}
+        className={`hover:text-brand-dark cursor-pointer ${instrumentSerif.className} text-lg`}
+      >
         {label}
       </Link>
     );
@@ -73,7 +77,7 @@ export default function Navbar() {
         </Link>
       )}
 
-      <div className="space-x-8 text-sm font-medium tracking-wide">
+      <div className="space-x-8 text font-medium tracking-wide">
         {getNavLink("#about", "about")}
         {getNavLink("#mentor", "mentors")}
         {getNavLink("#portfolio", "portfolio")}
@@ -81,7 +85,7 @@ export default function Navbar() {
           href="https://ucdhacknight.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block rounded-full bg-[#7A40FF] px-3 py-2 text-md font-medium text-white transition-all duration-200 hover:bg-[#5A2FD6] hover:shadow-lg cursor-pointer"
+          className="inline-block rounded-full bg-[#7A40FF] px-3 py-2 text-sm font-medium text-white transition-all duration-200 hover:bg-[#5A2FD6] hover:shadow-lg cursor-pointer"
         >
           Register Now
         </a>
