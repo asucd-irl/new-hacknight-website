@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function AboutSectionTwo() {
   return (
     <Section id="about" bg="bg-[#FEFFF3]">
-      <div className="w-full px-[120px] flex flex-col items-start">
+      <div className="flex flex-col items-start">
         <div className="flex flex-col gap-6 mb-10">
           <h1 className="text-[80px] font-bold">
             Why <span className="text-[#7A40FF]">HackNights?</span>

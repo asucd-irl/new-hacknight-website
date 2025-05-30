@@ -7,6 +7,7 @@ import FAQSection from "./sections/FAQSection";
 import Footer from "./_components/Footer";
 import AboutSectionTwo from "./sections/AboutSectionTwo";
 import MentorSection from "./sections/MentorSection";
+import VideoSection from "./sections/VideoSection";
 import AlumniSection from "./sections/AlumniSection";
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <MentorSection />
       <PortfolioSection />
       <AlumniSection />
+      <VideoSection />
       <FAQSection />
       <Footer />
     </>
