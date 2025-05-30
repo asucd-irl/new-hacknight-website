@@ -69,7 +69,7 @@ export default function FAQSection() {
   return (
     <Section id="faq" bg="bg-[#FEFFF3]">
       <div className="mx-auto w-full max-w-3xl px-6">
-        <h2 className="mb-10 text-center text-4xl font-bold text-brand-dark">
+        <h2 className="mb-10 text-center text-5xl font-bold text-brand-dark">
           FAQs
         </h2>
 
