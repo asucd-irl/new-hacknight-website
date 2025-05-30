@@ -17,29 +17,40 @@ const CAROUSEL_ITEMS = [
 export default function ImageCarousel() {
   return (
     <div className="overflow-x-hidden" data-astro-cid-carousel>
-      {/* Carousel container with automatic scrolling */}
-      <div className="flex w-fit gap-6 p-4 md:p-8 lg:px-12 carousel">
-        {/* Original cards */}
+      <div className="flex w-fit gap-16 p-4 md:p-12 lg:px-20 carousel">
         {CAROUSEL_ITEMS.map((item) => (
           <div
             key={`original-${item.id}`}
-            className="w-[calc(90vw-2rem)] max-w-72 h-72 lg:max-w-96 lg:w-96 lg:h-96 bg-cover bg-center rounded-xl relative overflow-hidden"
-            style={{ backgroundImage: `url('${item.image}')` }}
+            className="flex flex-col items-center justify-end -rotate-3 shadow-2xl border-2 border-[#BBBBBB] bg-white w-[calc(90vw-2rem)] max-w-128 h-128 lg:max-w-128 lg:w-128 lg:h-128 relative overflow-hidden p-6 pb-12"
+            style={{ borderRadius: "0px" }}
           >
-            <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-t from-black/75"></div>
-            <div className="absolute bottom-5 left-5 right-5 p-5 rounded-xl border border-white/25 backdrop-blur-sm"></div>
+            <div
+              className="w-full h-full"
+              style={{
+                backgroundImage: `url('${item.image}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                borderRadius: "0px",
+              }}
+            ></div>
           </div>
         ))}
 
-        {/* Duplicated cards for seamless loop */}
         {CAROUSEL_ITEMS.map((item) => (
           <div
             key={`duplicate-${item.id}`}
-            className="w-[calc(90vw-2rem)] max-w-72 h-72 lg:max-w-96 lg:w-96 lg:h-96 bg-cover bg-center rounded-xl relative overflow-hidden"
-            style={{ backgroundImage: `url('${item.image}')` }}
+            className="flex flex-col items-center justify-end -rotate-3 shadow-2xl border-2 border-[#BBBBBB] bg-white w-[calc(90vw-2rem)] max-w-128 h-128 lg:max-w-128 lg:w-128 lg:h-128 relative overflow-hidden p-6 pb-12"
+            style={{ borderRadius: "0px" }}
           >
-            <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-t from-black/75"></div>
-            <div className="absolute bottom-5 left-5 right-5 p-5 rounded-xl border border-white/25 backdrop-blur-sm"></div>
+            <div
+              className="w-full h-full"
+              style={{
+                backgroundImage: `url('${item.image}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                borderRadius: "0px",
+              }}
+            ></div>
           </div>
         ))}
       </div>
