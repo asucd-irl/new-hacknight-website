@@ -1,6 +1,7 @@
 import Section from "./Section";
 import { mentors } from "../data/mentors";
 import Image from "next/image";
+import { instrumentSerif } from "../_components/fonts";
 
 export default function MentorSection() {
   return (
@@ -23,7 +24,11 @@ export default function MentorSection() {
                 className="object-cover"
               />
             </div>
-            <p className="text-lg leading-relaxed text-center">{mentor.bio}</p>
+            <p
+              className={`text-lg leading-relaxed text-center whitespace-pre-line ${instrumentSerif.className}`}
+            >
+              {mentor.bio}
+            </p>
           </div>
         ))}
       </div>
